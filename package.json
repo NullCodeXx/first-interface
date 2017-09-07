@@ -1,0 +1,22 @@
+{
+  "name": "first-interface",
+  "version": "0.0.1",
+  "description": "Création d'une interface avec typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/djaafarcode/first-interface.git"
+  },
+  "author": "D. BOUMAZA",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/djaafarcode/first-interface/issues"
+  },
+  "homepage": "https://github.com/djaafarcode/first-interface#readme",
+  "dependencies": {
+    "typescript": "^2.5.2"
+  }
+}
