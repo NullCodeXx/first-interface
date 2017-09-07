@@ -1,31 +1,38 @@
-var Arbres = /** @class */ (function () {
-    function Arbres(height, species, color, age) {
+var Pays = /** @class */ (function () {
+    function Pays(height, pays, color, puissance, emoji) {
         this.height = height;
-        this.species = species;
+        this.pays = pays;
         this.color = color;
-        this.age = age;
+        this.puissance = puissance;
+        this.emoji = emoji;
     }
-    Arbres.prototype.render = function () {
-        //Affichage change en function du type d'arbre.
-        var emoji = this.species;
-        if (this.species == "Arbre Feuillu") {
-            emoji = "🌳";
+    Pays.prototype.render = function () {
+        //Affichage change en function du type d'état du monde.
+        var emoji = this.pays;
+        if (this.pays == "FRANCE") {
+            emoji = "🇫🇷";
         }
-        else if (this.species == "Sapin") {
-            emoji = "🌲";
+        else if (this.pays == "Allemagne") {
+            emoji = "🇹🇩";
         }
-        else if (this.species == "pomme") {
-            emoji = "🍎";
+        else if (this.pays == "Brésil") {
+            emoji = "🇧🇷";
         }
-        console.log(emoji + " " + this.height + "meters" + this.color);
+        console.log(emoji + this.pays + this.height + this.puissance + this.color);
     };
-    return Arbres;
+    return Pays;
 }());
-var spruce = new Arbres(10, "Arbre Feuillu", "vert", 103);
-console.log(spruce);
-console.log("🌳");
-//Crée un tableau d'arbre
-var arbres = [];
-arbres.push(new Arbres(1, "Arbre1", "Vert lime", 100));
-console.log(arbres);
+var pays = new Pays(1, "France", "Bleu Blanc Rouge", 90, "🇫🇷");
+//Crée un tableau d'arbre qui va etre implémenter dans interface.
+var objects = []; //Renderfunc = que tout les object ont une method render.
+objects.push(new Pays(1, "pays1", "France", 10, "😀"));
+objects.push(new Pays(2, "pays2", "Allemagne", 20, "🇹🇩"));
+objects.push(new Pays(3, "pays3", "Argentine", 30, "🇳🇮"));
+objects.push(new Pays(4, "pays4", "Brésil", 40, "🇧🇷"));
+console.log(objects);
+for (var _i = 0, objects_1 = objects; _i < objects_1.length; _i++) {
+    var o = objects_1[_i];
+    o.render();
+}
+console.log(p);
 //# sourceMappingURL=main1.js.map

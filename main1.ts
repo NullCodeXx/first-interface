@@ -1,38 +1,49 @@
-class Arbres {
+// Inplement cette methode capable d'afficher.
+interface Renderfunc {
+    render();
+}
+
+class Pays {
     height: number;
-    species: string;
+    pays: string;
     color: string;
-    age: number;
-    constructor(height: number, species : string, color: string, age: number) {
+    puissance: number;
+    emoji: string;
+
+    constructor(height: number, pays : string, color: string, puissance: number,emoji: string) {
         this.height = height;
-        this.species = species;
+        this.pays = pays;
         this.color = color;
-        this.age = age; 
+        this.puissance = puissance; 
+        this.emoji = emoji;
     }
     render() {
-        //Affichage change en function du type d'arbre.
-        let emoji = this.species;
-        if(this.species == "Arbre Feuillu") {
-            emoji = "🌳";
-        }else if (this.species == "Sapin") {
-            emoji = "🌲";
-        }else  if (this.species == "pomme") {
-            emoji = "🍎";
+        //Affichage change en function du type d'état du monde.
+        let emoji = this.pays;
+        if(this.pays == "FRANCE") {
+            emoji = "🇫🇷";
+        }else if (this.pays == "Allemagne") {
+            emoji = "🇹🇩";
+        }else  if (this.pays == "Brésil") {
+            emoji = "🇧🇷";
         }
-        console.log(emoji + " " + this.height + "meters" + this.color);
+        console.log(emoji + this.pays + this.height + this.puissance + this.color );
     }
 }
 
+let pays = new Pays(1, "France", "Bleu Blanc Rouge", 90, "🇫🇷");
 
-let spruce = new Arbres(10, "Arbre Feuillu", "vert", 103);
+//Crée un tableau d'arbre qui va etre implémenter dans interface.
+let objects: Renderfunc[] = []; //Renderfunc = que tout les object ont une method render.
 
-console.log(spruce);
-console.log("🌳");
+objects.push(new Pays(1, "pays1", "France", 10, "😀"));
+objects.push(new Pays(2, "pays2", "Allemagne", 20, "🇹🇩"));
+objects.push(new Pays(3, "pays3", "Argentine", 30, "🇳🇮"));
+objects.push(new Pays(4, "pays4", "Brésil", 40, "🇧🇷"));
+console.log(objects);
 
+for (let o of objects) {
+    o.render();
+}
 
-//Crée un tableau d'arbre
-
-let arbres: Arbres[] = [];
-
-arbres.push(new Arbres(1, "Arbre1", "Vert lime", 100));
-console.log(arbres);
+console.log(p);
