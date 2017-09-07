@@ -1,4 +1,4 @@
-class Tree {
+class Arbres {
     height: number;
     species: string;
     color: string;
@@ -24,14 +24,15 @@ class Tree {
 }
 
 
-let spruce = new Tree(10, "Arbre Feuillu", "vert", 103);
+let spruce = new Arbres(10, "Arbre Feuillu", "vert", 103);
 
 console.log(spruce);
 console.log("🌳");
 
 
-//crée un tableau d'arbre
+//Crée un tableau d'arbre
 
 let arbres: Arbres[] = [];
 
 arbres.push(new Arbres(1, "Arbre1", "Vert lime", 100));
+console.log(arbres);
