@@ -23,5 +23,7 @@ class Person {
 let n = new Ninja();
 let p = new Person();
 
-// Variable typé = ninja.
-let f:Fighter = n;
+// Variable typé = ninja. 
+let test1:Fighter = n;
+//si souligner rouge = mauvais.
+let test2:Fighter = p;
